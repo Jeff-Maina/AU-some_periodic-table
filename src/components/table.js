@@ -5,6 +5,12 @@ import "../styles/table.css";
 function Table({ transferData }) {
   const [elements, setElements] = useState([]);
   const [elementsLowerGrid, setElementsLowerGrid] = useState([]);
+  const [elementColor,setElementColor] = useState('#ad8e70')
+  const [elementSymbol,setElementSymbol] = useState('H')
+  const [atomicNumber,setAtomicNumber] = useState(1)
+  const [atomicMass,setAtomicMass] = useState(1.00794)
+  const[symbolColor,setSymbolColor] = useState('#FFFFFF')
+
 
   useEffect(() => {
     fetch("https://api.npoint.io/de68b6bf88b29ffe56f5")
@@ -14,6 +20,127 @@ function Table({ transferData }) {
         console.log(data);
       });
   }, []);
+
+
+  //change demo datails
+
+  function handleHover(data){
+  setElementSymbol(data.symbol)
+  setAtomicNumber(data.atomicNumber)
+  setAtomicMass(data.atomicMass)
+
+  if(data.groupBlock === 'actinoid'){
+    console.log(data.groupBlock);
+    setElementColor('rgb(99, 58, 8)')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'lanthanoid'){
+    setElementColor('#ad8b73')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'noble gas'){
+    setElementColor('#d67d3e')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'halogen'){
+    setElementColor('#d6e4e5')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'alkali metal'){
+    setElementColor('#6d502d')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'alkaline earth metal'){
+    setElementColor('#efb186')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'nonmetal'){
+    setElementColor('#ad8e70')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'metalloid'){
+    setElementColor('#e5ba73')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'metal'){
+    setElementColor('#e5ba73')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  else if(data.groupBlock === 'transition metal'){
+    setElementColor('pink')
+    setSymbolColor(`#${data.cpkHexColor}`)
+  }
+  }
+
+  // Helium and Hydrogen
+
+  let hydrogen = elements.filter((eleme)=>{
+    return(eleme.name === 'Hydrogen')
+  })
+
+  let hydrogenCard = hydrogen.map((elem,index)=>{
+    return(
+      <NavLink
+      onMouseOver={()=>{
+        handleHover(elem)
+      }}
+        onClick={() => {
+          transferData(elem);
+        }}
+        id="navLink"
+        to="/card"
+        draggable={false}
+      >
+        <div
+          name={elem.name}
+          className={elem.groupBlock}
+          key={index}
+          id="elementCard"
+          draggable={false}
+        >
+          <h6 id="elementName">
+            <sup>{elem.atomicNumber}</sup>
+            {elem.symbol}
+          </h6>
+        </div>
+      </NavLink>
+    )
+  })
+
+
+  let helium = elements.filter((eleme)=>{
+    return(eleme.name === 'Helium')
+  })
+
+  let heliumCard = helium.map((elem,index)=>{
+    return(
+      <NavLink
+      onMouseOver={()=>{
+        handleHover(elem)
+      }}
+        onClick={() => {
+          transferData(elem);
+        }}
+        id="navLink"
+        to="/card"
+        draggable={false}
+      >
+        <div
+          name={elem.name}
+          className={elem.groupBlock}
+          key={index}
+          id="elementCard"
+          draggable={false}
+        >
+          <h6 id="elementName">
+            <sup>{elem.atomicNumber}</sup>
+            {elem.symbol}
+          </h6>
+        </div>
+      </NavLink>
+    )
+  })
+
 
   //left section elements
 
@@ -31,6 +158,9 @@ function Table({ transferData }) {
   let leftSectionList = leftSectionElements.map((elem, index) => {
     return (
       <NavLink
+      onMouseOver={()=>{
+        handleHover(elem)
+      }}
         onClick={() => {
           transferData(elem);
         }}
@@ -68,6 +198,9 @@ function Table({ transferData }) {
   let rightSectionList = rightSectionElements.map((elem, index) => {
     return (
       <NavLink
+      onMouseOver={()=>{
+        handleHover(elem)
+      }}
         onClick={() => {
           transferData(elem);
         }}
@@ -104,6 +237,9 @@ function Table({ transferData }) {
   let middleElementsList = middleGrid.map((elem, index) => {
     return (
       <NavLink
+        onMouseOver={()=>{
+          handleHover(elem)
+        }}
         onClick={() => {
           transferData(elem);
         }}
@@ -136,7 +272,9 @@ function Table({ transferData }) {
 
   let lanthanidesList = lanthanides.map((elem, index) => {
     return (
-      <NavLink id="navLink" to="/card" draggable={false}>
+      <NavLink id="navLink" to="/card" draggable={false} onMouseOver={()=>{
+        handleHover(elem)
+      }}>
         <div
           name={elem.name}
           className={elem.groupBlock}
@@ -163,6 +301,9 @@ function Table({ transferData }) {
   let actinoidList = actinides.map((elem, index) => {
     return (
       <NavLink
+      onMouseOver={()=>{
+        handleHover(elem)
+      }}
         onClick={() => {
           transferData(elem);
         }}
@@ -209,14 +350,26 @@ function Table({ transferData }) {
     );
   });
 
+  //No!! forgot all about hydrogen and Helium
+
   return (
     <div id="table">
       <div id="table-header">
           <h3>The Periodic Table of Elements</h3>
       </div>
+      <div id="he">
+        {hydrogenCard}
+        {heliumCard}
+      </div>
       <div id="topSection">
         <div id="left-side">{leftSectionList}</div>
-        <div id="transition-metals"></div>
+        <div id="transition-metals">
+          <div style={{backgroundColor: elementColor}} id="demo">
+              <span id="atomic-number-span"><h5>{atomicNumber}</h5><hr/><h6>atomic number</h6></span>
+              <span id="chemical-symbol-span"><h4 style={{color:symbolColor}}>{elementSymbol}</h4><hr/><h6>chemical symbol</h6></span>
+              <span id="atomic-mass-span"><h4>{atomicMass}</h4><hr/><h6>atomic mass</h6></span>
+          </div>
+        </div>
         <div id="right-side">{rightSectionList}</div>
       </div>
       <div id="middleSection">{middleElementsList}</div>

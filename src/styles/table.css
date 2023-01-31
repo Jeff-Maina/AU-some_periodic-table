@@ -1,14 +1,40 @@
-#table-header{
-text-align: center;
+#table-header {
+  text-align: center;
 }
 
-#table-header h3{
+#table-header h3 {
+  position: absolute;
   margin: 0;
-  margin-bottom: .5em;
+  margin-bottom: 0em;
   position: relative;
   left: -3em;
   font-size: 2em;
   color: rgb(62, 62, 62);
+}
+
+#he {
+  position: relative;
+  margin-left: 10.9em;
+  /* left: 5em; */
+  display: flex;
+}
+
+#he #navLink .nonmetal {
+  position: relative;
+  left: -2px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+#he #navLink .noble {
+  position: absolute;
+  right: 10.8em;
+  border-bottom: none;
+  top: 2px;
+  border-top: 3px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 #topSection {
@@ -24,7 +50,7 @@ text-align: center;
 #left-side {
   border-left: 3px solid black;
   border-right: 3px solid black;
-  border-top: 3px solid black;
+  border-top: 2px solid black;
   height: 100%;
   grid-area: left;
   display: grid;
@@ -39,18 +65,128 @@ text-align: center;
 }
 
 #transition-metals {
+  position: relative;
   grid-area: transition;
   width: 41.08em;
-  border-bottom: 3px solid black;
-  border-right:1px solid black;
+  border-bottom: 2px solid black;
+  border-right: 1.2px solid black;
   height: 100%;
+}
+
+#demo {
+  border: 3px solid black;
+  position: absolute;
+  height: 7em;
+  width: 7em;
+  background-color: #d67d3e;
+  left: 3em;
+}
+
+#atomic-number-span {
+  display: flex;
+  position: relative;
+  width: 19em;
+}
+
+#atomic-number-span h5 {
+  color: rgb(36, 19, 19);
+  position: absolute;
+  margin: 0;
+  margin-left: 0.1em;
+  font-size: 1.5em;
+}
+
+#atomic-number-span hr {
+  position: absolute;
+  margin: 0;
+  border: none;
+  height: 1px;
+  width: 8em;
+  left: 2.5em;
+  top: 12px;
+  background-color: black;
+}
+
+#atomic-number-span h6 {
+  margin: 0;
+  position: absolute;
+  left: 11.5em;
+  top: 2px;
+  color: rgb(96, 96, 96);
+  font-size: 1em;
+}
+
+#chemical-symbol-span {
+  width: 19em;
+  position: relative;
+  display: flex;
+  top: 0.6em;
+}
+
+#chemical-symbol-span h4 {
+  color: rgb(62, 60, 60);
+  margin: 0;
+  font-size: 4.5em;
+  margin-left: 0.1em;
+}
+
+#chemical-symbol-span hr {
+  position: absolute;
+  top: 2.5em;
+  left: 6.5em;
+  border: none;
+  z-index: 899;
+  background-color: black;
+  height: 1px;
+  width: 5em;
+}
+
+#chemical-symbol-span h6 {
+  position: absolute;
+  top: 2.4em;
+  left: 12em;
+  font-size: 1em;
+  margin: 0;
+  color: rgb(96, 96, 96);
+}
+
+#atomic-mass-span {
+  position: relative;
+  display: flex;
+  top: 0.5em;
+  left: -10px;
+  width: 20em;
+}
+
+#atomic-mass-span h4 {
+  position: absolute;
+  margin: 0;
+  font-size: 0.9em;
+  left: 2em;
+}
+
+#atomic-mass-span hr {
+  position: absolute;
+  background-color: black;
+  border: none;
+  height: 1px;
+  width: 5em;
+  left: 6.9em;
+}
+
+#atomic-mass-span h6 {
+  position: absolute;
+  left: 14.4em;
+  top: -2.4em;
+  font-size: 0.9em;
+  color: rgb(96, 96, 96);
 }
 
 #right-side {
   grid-area: right;
   border-left: 3px solid black;
   border-right: 2px solid black;
-  border-top: 3px solid black;
+  border-top: 2.5px solid black;
   display: grid;
   width: 24.55em;
   grid-template-columns: auto auto auto auto auto auto;
@@ -84,13 +220,13 @@ text-align: center;
 #lanthanides-container {
   position: relative;
   left: 2.15em;
-  margin-top: 3em !important;
+  margin-top: 1.5em !important;
   padding: 0;
   height: 4.2em !important;
   margin: auto;
   display: grid;
   width: 61.6em;
-  border-top: 3px solid black;
+  border-top: 1px solid black;
   border-right: 3px solid black;
   border-left: 3px solid black;
   grid-template-columns:
@@ -300,27 +436,27 @@ sup {
 /* key styling */
 #key-container {
   position: relative;
-  left: -1em;
+  left: -12em;
   margin: auto;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  width: 72em;
-  margin-top: 2em;
+  width: 50em;
+  margin-top: 1em;
 }
 
 #keySpan {
+  /* margin: 0 !important; */
   position: relative;
   display: flex;
   flex-direction: row;
-  max-width: 13.5em;
-  width: auto;
+  width: 13em;
   margin-bottom: .5em;
 }
 
 .color {
   border: 2px solid black;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   background-color: #6d502d;
   border-radius: 50%;
 }
@@ -329,8 +465,8 @@ sup {
   position: absolute;
   font-size: 1em;
   margin: 0;
-  top: 0.55em;
-  left: 3.5em;
+  top: 0.25em;
+  left: 2.5em;
 }
 
 [id="Alkali metals"] {

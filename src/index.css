@@ -3,6 +3,7 @@
   src: url('./fonts/CrimsonPro-SemiBold.ttf');
 }
 body {
+  background-color: #e6d3c1;
   margin: 0;
   font-family:Crimson;
   -webkit-font-smoothing: antialiased;
