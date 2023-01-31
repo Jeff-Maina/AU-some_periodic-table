@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/table.css";
+import Loader from "./loader";
 
 function Table({ transferData }) {
   const [elements, setElements] = useState([]);
   const [elementsLowerGrid, setElementsLowerGrid] = useState([]);
+  const[elementName,setElementname] = useState('Hydrogen');
   const [elementColor,setElementColor] = useState('#ad8e70')
   const [elementSymbol,setElementSymbol] = useState('H')
   const [atomicNumber,setAtomicNumber] = useState(1)
   const [atomicMass,setAtomicMass] = useState(1.00794)
   const[symbolColor,setSymbolColor] = useState('#FFFFFF')
+  const[pending,setPending] = useState(true)
+  
 
 
   useEffect(() => {
@@ -17,6 +21,7 @@ function Table({ transferData }) {
       .then((response) => response.json())
       .then((data) => {
         setElements(data);
+        setPending(false)
         console.log(data);
       });
   }, []);
@@ -28,6 +33,7 @@ function Table({ transferData }) {
   setElementSymbol(data.symbol)
   setAtomicNumber(data.atomicNumber)
   setAtomicMass(data.atomicMass)
+  setElementname(data.name)
 
   if(data.groupBlock === 'actinoid'){
     console.log(data.groupBlock);
@@ -338,6 +344,7 @@ function Table({ transferData }) {
     "Noble gases",
     "Lanthanides",
     "Actinides",
+    "halogens"
   ];
 
   let keyList = blockGroups.map((blockgroup) => {
@@ -354,7 +361,8 @@ function Table({ transferData }) {
 
   return (
     <div id="table">
-      <div id="table-header">
+      {pending && <Loader/>}
+      {pending || <><div id="table-header">
           <h3>The Periodic Table of Elements</h3>
       </div>
       <div id="he">
@@ -369,6 +377,9 @@ function Table({ transferData }) {
               <span id="chemical-symbol-span"><h4 style={{color:symbolColor}}>{elementSymbol}</h4><hr/><h6>chemical symbol</h6></span>
               <span id="atomic-mass-span"><h4>{atomicMass}</h4><hr/><h6>atomic mass</h6></span>
           </div>
+          <div id="elementdemoName">
+             <h3>{elementName}</h3>
+          </div>
         </div>
         <div id="right-side">{rightSectionList}</div>
       </div>
@@ -382,6 +393,7 @@ function Table({ transferData }) {
         <div id="actinide-container">{actinoidList}</div>
       </span>
       <div id="key-container">{keyList}</div>
+      </>}
     </div>
   );
 }

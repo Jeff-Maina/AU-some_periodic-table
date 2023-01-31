@@ -1,0 +1,100 @@
+#loader-container{
+    margin-top: 15em;
+    margin-left: 40em;
+    position: absolute;
+    height: 15em;
+    width: 15em;
+    /* background-color: black; */
+}
+
+#second-level{
+height: 12em;
+width: 12em;
+border: 7px solid gray;
+border-radius: 50%;
+display: flex;
+}
+
+#first-level{
+    display: flex;
+    margin: auto;
+    height: 9em;
+    width: 9em;
+    border: 7px solid rgb(133, 133, 133);
+    border-radius: 50%;   
+}
+
+#inner-level{
+    position: relative;
+    margin: auto;
+    height: 5em;
+    background-color: bisque;
+    width: 5em;
+    border: 7px solid rgb(66, 66, 66);
+    border-radius: 50%;   
+    text-align: center;
+    display: flex;
+}
+
+#inner-level h2{
+position: absolute; 
+top: -.6em;
+left: .3em;  
+font-size: 3em;
+}
+
+#outer-electrons{
+    position: relative;
+    left: 2em;
+    top: -2.7em;
+    width: 1em;
+    height: 10.5em;
+    transform-origin: center center;
+    animation: loader-outer 1.5s linear infinite;
+}
+
+#top-electron{
+    position: absolute;
+    top: 0;
+    height: 1em;
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#bottom-electron{
+    position: absolute;
+    bottom: 0;
+    height: 1em;
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+#inner-electrons{
+    position: relative;
+    top: -4.2em;
+    left: 1em;
+    width: 1em;
+    height: 13.5em;
+    animation: loader-inner 1.5s linear infinite;
+}
+
+@keyframes loader-outer {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-360deg);
+    }
+}

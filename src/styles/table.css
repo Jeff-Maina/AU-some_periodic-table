@@ -182,6 +182,23 @@
   color: rgb(96, 96, 96);
 }
 
+#elementdemoName{
+  cursor: pointer;
+  position: absolute;
+  height: 2em;
+  top: 5em;
+  left: 25em;
+  width: 15em;
+  border: 2px solid black;
+  background-color: #d77514;
+  text-align: center;
+}
+
+#elementdemoName h3{
+  margin: 0;
+  margin-top: .3em;
+}
+
 #right-side {
   grid-area: right;
   border-left: 3px solid black;
@@ -246,7 +263,7 @@
   position: absolute;
   margin: 0;
   font-size: 1.5em;
-  top: 3em;
+  top: 2em;
   left: 7.2em;
 }
 
@@ -439,7 +456,7 @@ sup {
   left: -12em;
   margin: auto;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   width: 50em;
   margin-top: 1em;
 }
@@ -471,6 +488,10 @@ sup {
 
 [id="Alkali metals"] {
   background-color: rgb(109, 80, 45, 0.9);
+}
+
+[id="halogens"] {
+    background-color: #d6e4e5;
 }
 
 [id="Alkaline earth metals"] {
