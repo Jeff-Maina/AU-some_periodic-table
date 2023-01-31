@@ -1,0 +1,13 @@
+#singleCard{
+    margin: auto;
+    margin-top: 6em;
+    height: 35em;
+    width: 30em;
+    background-color:  #633a08;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .3);
+}
+
+#singleCard:hover{
+    transition: .5s;
+}
+

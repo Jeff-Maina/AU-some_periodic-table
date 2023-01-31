@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Crimson;
+  src: url('./fonts/CrimsonPro-SemiBold.ttf');
+}
+body {
+  margin: 0;
+  font-family:Crimson;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

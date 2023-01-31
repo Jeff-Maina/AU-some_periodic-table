@@ -1,0 +1,366 @@
+#table-header{
+text-align: center;
+}
+
+#table-header h3{
+  margin: 0;
+  margin-bottom: .5em;
+  position: relative;
+  left: -3em;
+  font-size: 2em;
+  color: rgb(62, 62, 62);
+}
+
+#topSection {
+  position: relative;
+  left: 2.8em;
+  margin: auto;
+  height: 8em;
+  display: flex;
+  width: 80em;
+  /* grid-template-columns: auto auto auto; */
+}
+
+#left-side {
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+  height: 100%;
+  grid-area: left;
+  display: grid;
+  width: 8em;
+  grid-template-columns: auto auto;
+}
+
+#left-side div {
+  position: relative;
+  left: -2px;
+  top: -1px;
+}
+
+#transition-metals {
+  grid-area: transition;
+  width: 41.08em;
+  border-bottom: 3px solid black;
+  border-right:1px solid black;
+  height: 100%;
+}
+
+#right-side {
+  grid-area: right;
+  border-left: 3px solid black;
+  border-right: 2px solid black;
+  border-top: 3px solid black;
+  display: grid;
+  width: 24.55em;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+#right-side div {
+  position: relative;
+  left: -2px;
+  top: -1px;
+}
+
+#middleSection {
+  margin: auto;
+  display: grid;
+  width: 74em;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  grid-template-columns:
+    auto auto auto auto auto auto auto auto
+    auto auto auto auto auto auto auto auto
+    auto auto;
+}
+
+#middleSection div {
+  position: relative;
+  left: -2px;
+  top: 2px;
+}
+
+#lanthanides-container {
+  position: relative;
+  left: 2.15em;
+  margin-top: 3em !important;
+  padding: 0;
+  height: 4.2em !important;
+  margin: auto;
+  display: grid;
+  width: 61.6em;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  grid-template-columns:
+    auto auto auto auto auto auto auto auto
+    auto auto auto auto auto auto auto auto
+    auto auto;
+}
+
+#lanthanideSpan {
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#lanthanideSpan h5 {
+  position: absolute;
+  margin: 0;
+  font-size: 1.5em;
+  top: 3em;
+  left: 7.2em;
+}
+
+#lanthanides-container div {
+  border-top: 3px solid black;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  border-bottom: 3px solid black;
+}
+
+#actinideSpan {
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#actinideSpan h5 {
+  position: absolute;
+  margin: 0;
+  font-size: 1.5em;
+  top: 1.2em;
+  left: 8.2em;
+}
+
+#actinide-container {
+  position: relative;
+  left: 2.15em;
+  margin-top: 0.5em !important;
+  margin: auto;
+  display: grid;
+  height: 4.1em;
+  width: 61.6em;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  grid-template-columns:
+    auto auto auto auto auto auto auto auto
+    auto auto auto auto auto auto auto auto
+    auto auto;
+}
+
+#actinide-container div {
+  /* border-top: none !important; */
+  border-top: 3px solid black;
+  position: relative;
+  top: -1px;
+  height: 4em;
+  left: -2px;
+}
+
+#navLink {
+  text-decoration: none !important;
+}
+
+#elementCard {
+  /* opacity: .9; */
+  color: black;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none !important;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  height: 4em;
+  width: 4em;
+  border: 1px solid black;
+  justify-content: center;
+}
+
+#elementCard:hover {
+  opacity: 1;
+}
+
+/* element colors and styling */
+#elementName {
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 800;
+  justify-self: center;
+  align-self: center;
+}
+
+sup {
+  font-size: 0.6em;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+#atomicMass {
+  margin: 0;
+  font-size: 0.6em;
+  margin-top: 0.6em;
+}
+
+.actinoid {
+  background-color: rgb(99, 58, 8);
+}
+
+.actinoid:hover {
+  background-color: rgb(99, 58, 8, 0.9);
+}
+
+.lanthanoid {
+  background-color: #ad8b73;
+}
+
+.lanthanoid:hover {
+  background-color: rgb(173, 139, 115, 0.9);
+}
+
+[class="noble gas"] {
+  background-color: #d67d3e;
+}
+
+[class="noble gas"]:hover {
+  background-color: rgb(214, 125, 62, 0.9);
+}
+
+.halogen {
+  background-color: #d6e4e5;
+}
+
+.halogen:hover {
+  background-color: rgb(214, 228, 229, 0.6);
+}
+
+.earth {
+  background-color: #efb186;
+}
+
+.earth:hover {
+  background-color: rgb(239, 177, 134, 0.7);
+}
+
+.alkali {
+  background-color: #6d502d;
+}
+
+.alkali:hover {
+  background-color: rgb(109, 80, 45, 0.9);
+}
+
+.nonmetal {
+  background-color: #ad8e70;
+}
+
+.nonmetal:hover {
+  background-color: rgb(173, 142, 112, 0.8);
+}
+
+.metalloid {
+  background-color: #e5ba73;
+}
+
+.metalloid:hover {
+  background-color: rgb(229, 186, 115, 0.8);
+}
+
+[class="metal"] {
+  background-color: #e5ba73;
+}
+
+[class="metal"]:hover {
+  background-color: rgb(229, 186, 115, 0.8);
+}
+
+[class="transition metal"] {
+  background-color: pink;
+}
+
+[class="transition metal"]:hover {
+  background-color: rgb(255, 192, 203, 0.8);
+}
+
+[class="post-transition metal"] {
+  background-color: rgb(238, 212, 188);
+}
+
+[class="post-transition metal"]:hover {
+  background-color: #f8ede3;
+}
+
+/* key styling */
+#key-container {
+  position: relative;
+  left: -1em;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 72em;
+  margin-top: 2em;
+}
+
+#keySpan {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 13.5em;
+  width: auto;
+  margin-bottom: .5em;
+}
+
+.color {
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+  background-color: #6d502d;
+  border-radius: 50%;
+}
+
+#color-rep {
+  position: absolute;
+  font-size: 1em;
+  margin: 0;
+  top: 0.55em;
+  left: 3.5em;
+}
+
+[id="Alkali metals"] {
+  background-color: rgb(109, 80, 45, 0.9);
+}
+
+[id="Alkaline earth metals"] {
+  background-color: rgb(239, 177, 134, 0.7);
+}
+
+[id="transitional metals"] {
+  background-color: pink;
+}
+
+[id="metalloids"] {
+  background-color: rgb(229, 186, 115, 0.8);
+}
+
+[id="Non-metals"] {
+  background-color: rgb(173, 142, 112, 0.8);
+}
+
+[id="Noble gases"] {
+  background-color: rgb(214, 125, 62, 0.9);
+}
+
+[id="Lanthanides"] {
+  background-color: #ad8b73;
+}
+
+[id="Actinides"] {
+  background-color: rgb(99, 58, 8);
+}
