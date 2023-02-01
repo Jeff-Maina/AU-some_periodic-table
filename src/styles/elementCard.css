@@ -1,11 +1,78 @@
 #singleCard{
+    position: relative ;
     margin: auto;
-    margin-top: 6em;
+    top: 6em;
+    margin-left: 32em;
     height: 35em;
     width: 30em;
     background-color:  #633a08;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, .3);
 }
+
+#selectedAtomicNumber{
+    cursor: pointer !important;
+    color: azure;
+    position: absolute;
+    right: .5em;
+    top: .2em;
+    margin: 0;
+    font-size: 2em;
+}
+
+#selectedElementSymbol{
+    position: relative;
+    margin: 0;
+    font-size: 7em !important;
+    margin-top: .1em !important;
+    margin-left: .1em !important;
+    margin-bottom: 0em !important;
+    color: azure;
+}
+
+#selectedName{
+    margin: 0 !important;
+    color: aliceblue;
+    font-size: 1.5em;
+    margin-left: .8em !important;
+    font-weight: 200;
+}
+
+#selectedAtomicMass{
+    margin: 0;
+    margin-left: 1.2em;
+    position: relative;
+    color: azure;
+}
+
+#gp{
+    position: absolute;
+    top: 4.5em;
+    right: 1em;
+}
+
+#gp span{
+    display: flex;
+    width: 5em;
+}
+
+#groupText{
+    left: 5px;
+}
+
+#gp h3{
+    position: relative;
+    top: 3px;
+    margin: 0;
+    margin-bottom: .2em;
+}
+
+#gp h2{
+    position: absolute;
+    right: 0;
+    margin: 0;
+    margin-bottom: .2em;
+}
+
 
 #singleCard:hover{
     transition: .5s;
