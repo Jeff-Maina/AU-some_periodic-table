@@ -1,12 +1,153 @@
+#instruction{
+    position: absolute;
+    height: 2em;
+    width: 20em;
+    background-color: #ad8e70;
+    right: 2em;
+    top :2em
+    /* y2k */
+}
+
+#instruction div{
+    top: 2px;
+    left: 2px;
+    height: 70%;
+    width: 97%;
+    position: absolute;
+    border: 2px solid black;
+}
+
+#instruction h6{
+    margin: 0;
+    font-size: 1em;
+    margin-top: .2em;
+    margin-left: 1em;
+    color: black;
+}
+
+#back-button{
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    width: 9.3em;
+    height: 3.3em;
+    padding: 0;
+    /* y2k */
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+
+#back-button:hover{
+    opacity: .8;
+}
+
+#back-button div{
+    width: 3em;
+    height: 96%;
+}
+
+#barium{
+    border: 2px solid black;
+    border-right: 1px;
+    background-color: #efb186;
+}
+
+#barium h5{
+    position: relative;
+    left: 9px;
+    top: 3px;
+    margin: 0;
+    font-size: 2em;
+}
+
+#barium sup{
+    margin: 0;
+    position: absolute;
+    top: -6px;
+    left: -7px;
+}
+
+#barium h6{
+    margin: 0;
+    font-size: .7em;
+    margin-left: 4px;
+}
+
+#carbon{
+    border: 2px solid black;
+    border-right: 1px;
+    background-color: #ad8e70;
+}
+
+#carbon h5{
+    position: relative;
+    left: 9px;
+    top: 3px;
+    margin: 0;
+    font-size: 2em;
+}
+
+#carbon sup{
+    margin: 0;
+    position: absolute;
+    top: -6px;
+    left: -7px;
+}
+
+#carbon h6{
+    margin: 0;
+    font-size: .7em;
+    margin-left: 4px;
+}
+
+#potassium{
+    border: 2px solid black;
+    background-color: #6d502d;
+}
+
+#potassium h5{
+    position: relative;
+    left: 13px;
+    top: 3px;
+    margin: 0;
+    font-size: 2em;
+}
+
+#potassium sup{
+    margin: 0;
+    position: absolute;
+    top: -3px;
+    left: -12px;
+    font-size: .5em;
+}
+
+#potassium h6{
+    margin: 0;
+    font-size: .7em;
+    margin-left: 4px;
+}
+
 #singleCard{
     position: relative ;
     margin: auto;
-    top: 6em;
+    top: 1em;
     margin-left: 32em;
     height: 35em;
     width: 30em;
     background-color:  #633a08;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, .3);
+}
+
+#border-box{
+ position: absolute;
+ top: 1em;
+ left: .9em;
+ height: 93.7%;
+ width: 93%;
+ border:1px black solid;
 }
 
 #selectedAtomicNumber{
@@ -41,6 +182,7 @@
     margin: 0;
     margin-left: 1.2em;
     position: relative;
+    top: 1em;
     color: azure;
 }
 
@@ -59,12 +201,54 @@
     left: 5px;
 }
 
+#gp h2{
+    color: rgb(202, 202, 238);
+}
+
 #gp h3{
     position: relative;
     top: 3px;
     margin: 0;
     margin-bottom: .2em;
+    color: #efb186;
 }
+
+#details{
+    position: relative;
+    top: 1.5em;
+}
+
+#details span{
+    position: relative;
+    display: flex;
+    margin-bottom: .3em;
+    /* background-color: aliceblue; */
+}
+
+#details h3{
+    cursor: pointer;
+    margin: 0;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: rgb(159, 168, 168);
+}
+
+#details h3:hover{
+color: rgb(211, 214, 214);
+}
+
+#details h2{
+    position: absolute;;
+    right: 1em;
+    font-size: 1.2em;
+    margin-left: 1em;
+    top: -5px;
+    margin: 0;
+    color: white;
+}
+
+
 
 #gp h2{
     position: absolute;
@@ -76,5 +260,56 @@
 
 #singleCard:hover{
     transition: .5s;
+}
+
+#definition-container{
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    position: absolute;
+    width: 30em;
+    height: 9em;
+    background-color: #efb186;
+    right: 34em;
+    bottom: 1em;
+    /* background-color: #6d502d; */
+}
+
+#box-border{
+    position: absolute;
+    top: .4em;
+    left: .4em;
+    height: 90%;
+    width: 97%;
+    border: 2px solid black;
+    padding: .5em;
+    box-sizing: border-box;
+}
+
+#definition{
+    margin: 0;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    position: relative;
+    top: 0em;
+    left: .4em;
+}
+
+#word{
+    margin: 0;
+    font-size: 1.5em;
+    position: relative;
+    left: 1em;
+    top: .2em;
+    color: rgb(73, 73, 73);
+
+}
+
+#actual-definition{
+    position: relative;
+    padding-left: .3em;
+    top: 10px;
+    font-size: 1em;
+    margin: 0;
+    color: rgb(53, 26, 26);
 }
 

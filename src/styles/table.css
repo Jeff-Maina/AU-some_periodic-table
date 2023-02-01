@@ -79,6 +79,7 @@
   height: 7em;
   width: 7em;
   background-color: #d67d3e;
+  top: -2em;
   left: 3em;
 }
 
@@ -186,8 +187,8 @@
   cursor: pointer;
   position: absolute;
   height: 2em;
-  top: 5em;
-  left: 25em;
+  top: 3em;
+  left: 22em;
   width: 15em;
   border: 2px solid black;
   background-color: #d77514;
@@ -520,4 +521,76 @@ sup {
 
 [id="Actinides"] {
   background-color: rgb(99, 58, 8);
+}
+
+#vertical-numbers{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 9em;
+  top: 4em;
+}
+
+#vertical-numbers h2{
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 3em;
+}
+
+#group-numbers1{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 12.8em;
+  top: .9em;
+}
+
+#g2{
+  position: relative;
+  top: 4em !important;
+}
+
+
+#group-numbers1 h2{
+  font-size: 1em;
+  margin: 0;
+  margin-right: 3.6em;
+}
+
+#groupNumbers{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 6.1em;
+  left: 1.8em;
+}
+#groupNumbers h2{
+  font-size: 1em;
+  margin: 0;
+  margin-right: 3.2em;
+}
+
+#group-numbers3{
+  position: absolute;
+  top: -2em;
+  right:3em;
+  display: flex;
+  flex-direction: row;
+}
+
+#group-numbers3 h2{
+  font-size: 1em;
+ margin: 0;
+ margin-right: 2.8em;
+}
+
+#g17{
+  position: relative;
+  left: -5px;
+}
+
+#g18{
+  position: relative;
+  top: -3.8em;
+  left: -15px;
 }

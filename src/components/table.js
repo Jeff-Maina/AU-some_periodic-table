@@ -365,6 +365,19 @@ function Table({ transferData }) {
       {pending || <><div id="table-header">
           <h3>The Periodic Table of Elements</h3>
       </div>
+      <div id="vertical-numbers">
+         <h2>1</h2>
+         <h2>2</h2>
+         <h2>3</h2>
+         <h2>4</h2>
+         <h2>5</h2>
+         <h2>6</h2>
+         <h2>7</h2>
+      </div>
+      <div id="group-numbers1">
+        <h2>I</h2>
+        <h2 id="g2">II</h2>
+      </div>
       <div id="he">
         {hydrogenCard}
         {heliumCard}
@@ -380,8 +393,31 @@ function Table({ transferData }) {
           <div id="elementdemoName">
              <h3>{elementName}</h3>
           </div>
+          <div id="groupNumbers">
+            <h2>III</h2>
+            <h2>IV</h2>
+            <h2>V</h2>
+            <h2>VI</h2>
+            <h2>VII</h2>
+            <h2>VII</h2>
+            <h2>IX</h2>
+            <h2>X</h2>
+            <h2>XI</h2>
+            <h2>XII</h2>
+          </div>
         </div>
-        <div id="right-side">{rightSectionList}</div>
+        {/* y2k */}
+        <div id="group-numbers3">
+          <h2>XIII</h2>
+          <h2>XIV</h2>
+          <h2>XV</h2>
+          <h2>XVI</h2>
+          <h2 id="g17">XVII</h2>
+          <h2 id="g18">XVIII</h2>
+        </div>
+        <div id="right-side">
+          {rightSectionList}
+          </div>
       </div>
       <div id="middleSection">{middleElementsList}</div>
       <span id="lanthanideSpan">
