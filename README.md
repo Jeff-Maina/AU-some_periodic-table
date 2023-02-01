@@ -25,7 +25,7 @@ The following information is provided for each element:-
 - Type of bonding.
 - Electronic configuration.
 - Van der Waals radius.
-- Ionization energy(in kj/mol).
+- Ionization energy ( in kj/mol ).
 - Oxidation states.
 - Boiling and Melting points.
 - Standard state.
