@@ -1,6 +1,6 @@
 # AU-some_periodic-table
 
-A web app that provides information on chemical elements in the periodic table.
+You ever need a periodic table of elements asap? Me neither.But some people out there do and this application is just what the need.Au-some periodic table is  web app that provides information on chemical elements in the periodic table.
 
 ## Technologies used
 
