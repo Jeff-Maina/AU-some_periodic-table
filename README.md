@@ -16,7 +16,7 @@ The periodic table is implemented as an HTML table and the information about eac
 ## Features
 - Interactive periodic table: The periodic table is presented in an interactive format that allows users to click on an element to learn more about its properties.
 - Element information: Users can access information about each element including its :-
-    - Name of element.
+    - Name.
     - Chemical symbol.
     - Group and Period
     - Atomic number.
